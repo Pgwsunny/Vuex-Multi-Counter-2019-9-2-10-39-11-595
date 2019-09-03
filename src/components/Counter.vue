@@ -15,10 +15,12 @@
         },
         methods: {
             minus: function () {
-                this.$emit('update', this.index, this.value - 1)
+                // this.$emit('update', this.index, this.value - 1)
+                this.$store.commit("minusValue", this.index);
             },
             plus: function () {
-                this.$emit('update', this.index, this.value + 1)
+                // this.$emit('update', this.index, this.value + 1)
+                this.$store.commit("plusValue", this.index);
             }
         }
     }
