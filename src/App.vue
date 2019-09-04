@@ -1,10 +1,17 @@
 <template>
     <div id="app">
-        <CounterGroup :counterNumber="counterNumbers"/>
+        <!-- <CounterGroup :counterNumber="counterNumbers"/> 
+         <router-link to="/">button</router-link><br />
+         <router-link to="/welcome">Welcome</router-link><br />
+         <router-link to="/counter">Counter</router-link><br />
+         <router-link to="/todolist">go to todo</router-link>
+        <br />-->
+        <router-view />
     </div>
 </template>
 
 <script>
+    
     import CounterGroup from './components/CounterGroup.vue'
 
     export default {

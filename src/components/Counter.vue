@@ -21,6 +21,9 @@
             plus: function () {
                 // this.$emit('update', this.index, this.value + 1)
                 this.$store.commit("plusValue", this.index);
+                if(this.value >=10){
+                    this.$router.push("/welcome");
+                }
             }
         }
     }

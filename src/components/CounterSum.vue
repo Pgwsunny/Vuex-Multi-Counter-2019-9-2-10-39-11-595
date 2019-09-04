@@ -14,6 +14,10 @@ export default {
 
   computed: {
     counterSum: function() {
+      
+      if(this.$store.getters.counterSum >=10){
+                    this.$router.push("/welcome");
+                }
       return this.$store.getters.counterSum;
     }
   }
