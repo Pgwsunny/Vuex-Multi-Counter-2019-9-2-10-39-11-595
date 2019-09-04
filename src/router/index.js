@@ -4,6 +4,7 @@ import Welcome from '../Welcome.vue';
 import Counter from '../components/CounterGroup.vue';
 import home from '../home.vue';
 import main from '../main.vue';
+import my from '../my.vue';
 import dialogconfirm from '../dialog-confirm.vue';
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'main',
       component: main
+    },
+    {
+      path: '/my',
+      name: 'my',
+      component: my
     },
     {
       path: '/home',

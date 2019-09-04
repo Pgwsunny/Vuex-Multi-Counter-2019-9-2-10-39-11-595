@@ -1,10 +1,12 @@
 <template>
   <div>
-    <button @click="start">返回</button>
+    <span>姓名:</span>
+    <input type="text" v-model="username" />
     <br />
-    {{username}}
+    <!-- {{username}} -->
     <br />
-    <button @click="my">我的</button>
+    <span>电话:</span>
+    <input type="text"/>
     <br />
     <router-view />
     <br />
@@ -14,7 +16,6 @@
 <script>
 import dialogconfirm from "./dialog-confirm.vue";
 import main from "./main.vue";
-import my from "./my.vue";
 export default {
     props: {
     username: String
@@ -29,12 +30,6 @@ export default {
       this.$router.push({
         path: "/dialogconfirm",
         component: dialogconfirm
-      });
-    },
-    my: function() {
-      this.$router.push({
-        path: "/my",
-        component: my
       });
     }
   }
